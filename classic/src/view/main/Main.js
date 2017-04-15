@@ -15,7 +15,9 @@ Ext.define('MyApp.view.main.Main', {
 
         'MyApp.view.main.MainController',
         'MyApp.view.main.MainModel',
-        'MyApp.view.main.List'
+        'MyApp.view.main.List',
+
+        'MyApp.view.session.SessionLayout'
     ],
 
     controller: 'main',
@@ -58,7 +60,6 @@ Ext.define('MyApp.view.main.Main', {
     },
 
     defaults: {
-        bodyPadding: 20,
         tabConfig: {
             plugins: 'responsive',
             responsiveConfig: {
@@ -78,6 +79,14 @@ Ext.define('MyApp.view.main.Main', {
     items: [{
         title: 'Sessions',
         iconCls: 'fa-calendar-check-o',
+
+        layout: 'fit',
+
+        items: [{
+            xtype: 'sessionlayout'
+        }]
+    }, {
+        title: 'Sessions',
         items: [{
             xtype: 'panel',
             html: '<h1>Sessions</h1>'
