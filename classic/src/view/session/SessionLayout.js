@@ -51,7 +51,7 @@ Ext.define('MyApp.view.session.SessionLayout', {
                     region: 'west',
                     flex: 4,
 
-                    title: 'Sessions',
+                    title: 'Sessions'
                 }, {
                     xtype: 'panel',
                     region: 'west',

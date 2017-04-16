@@ -11,7 +11,7 @@ Ext.define('MyApp.store.Session', {
         { id: 3, title: 'Session title 3', length: '40 min', attend: true },
         { id: 4, title: 'Session title 4', length: '2 h', attend: true },
         { id: 5, title: 'Session title 5', length: '30 min', attend: true },
-        { id: 6, title: 'Session title 6', length: '30 min', attend: false },
+        { id: 6, title: 'Session title 6', length: '30 min', attend: false }
     ],
 
     proxy: {

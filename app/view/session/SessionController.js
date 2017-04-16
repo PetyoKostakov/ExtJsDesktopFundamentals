@@ -7,7 +7,7 @@ Ext.define('MyApp.view.session.SessionController', {
         'MyApp.view.session.SessionWindowForm'
     ],
 
-    onSessionItemDblClick ( gridPanel , record , item , index , e , eOpts ) {
+    onSessionItemDblClick: function (gridPanel, record, item, index, e , eOpts) {
         var formWindow = Ext.create('MyApp.view.session.SessionWindowForm');
 
         formWindow.down('#sessionForm').loadRecord(record);
