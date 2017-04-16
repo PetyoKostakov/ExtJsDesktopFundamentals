@@ -21,6 +21,10 @@ Ext.define('MyApp.view.session.SessionList', {
     columns: [
         { text: 'Length', dataIndex: 'length' },
         { text: 'Name', dataIndex: 'title', flex: 1 },
-        { xtype: 'checkcolumn', text: 'Attend', dataIndex: 'attend' }
+        { xtype: 'checkcolumn', text: 'Attend', dataIndex: 'attend', disabled: true}
     ],
+
+    listeners: {
+        itemdblclick: 'onSessionItemDblClick'
+    }
 });

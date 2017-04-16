@@ -5,7 +5,8 @@ Ext.define('MyApp.view.session.SessionLayout', {
     id: 'sessionLayout',
 
     requires: [
-        'Ext.Panel'
+        'Ext.Panel',
+        'MyApp.view.session.SessionList'
     ],
 
     title: 'Panel',
@@ -42,17 +43,17 @@ Ext.define('MyApp.view.session.SessionLayout', {
                 header: false,
 
                 defaults: {
-                    xtype: 'panel',
                     collapsible: true
                 },
 
                 items: [{
+                    xtype: 'sessionlist',
                     region: 'west',
                     flex: 4,
 
                     title: 'Sessions',
-                    html: 'sessions'
                 }, {
+                    xtype: 'panel',
                     region: 'west',
                     flex: 2,
                     split: true,
