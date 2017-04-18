@@ -25,6 +25,7 @@ Ext.define('MyApp.view.session.SessionList', {
     ],
 
     listeners: {
-        itemdblclick: 'onSessionItemDblClick'
+        itemdblclick: 'onSessionItemDblClick',
+        select: 'onSessionItemSelect'
     }
 });

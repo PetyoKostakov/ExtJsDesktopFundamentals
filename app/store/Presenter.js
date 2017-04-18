@@ -2,6 +2,7 @@ Ext.define('MyApp.store.Presenter', {
     extend: 'Ext.data.Store',
 
     alias: 'store.presenter',
+    storeId: 'presenter',
 
     fields:[ 'id', 'title', 'length', 'attend'],
 

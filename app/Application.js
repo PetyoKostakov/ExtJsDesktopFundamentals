@@ -10,6 +10,8 @@ Ext.define('MyApp.Application', {
 
     stores: [
         // TODO: add global / shared stores here
+        // Create stores at app init
+        'MyApp.store.SessionPresenter'
     ],
     
     launch: function () {

@@ -12,5 +12,23 @@ Ext.define('MyApp.view.session.SessionController', {
 
         formWindow.down('#sessionForm').loadRecord(record);
         formWindow.show();
+    },
+    onSessionItemSelect: function (rowModel , record , index , eOpts) {
+        var sessionId = record.get('id'); //record.getData().id;
+
+        // get presenter ids associated with this session
+        var presenterIds = [];
+        var sessionPresenterStore = Ext.getStore('sessionPresenter');
+        var sessionPresenterRec = sessionPresenterStore.query('sessionId', sessionId);
+        sessionPresenterRec.each(function (rec) {
+            presenterIds.push(rec.get("presenterId"));
+        })
+
+        // filter presenterStore i.e. presenter grid with presenter IDs
+        var presenterStore = Ext.getStore('presenter');
+        presenterStore.clearFilter();
+        presenterStore.filterBy(function (rec) {
+            return Ext.Array.contains(presenterIds, rec.get("id"))
+        });
     }
 });
